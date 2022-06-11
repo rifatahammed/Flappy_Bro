@@ -820,6 +820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3416242956497447075, guid: 5a2efc12e96bf1f4ea682998c79e4843, type: 3}
+      propertyPath: m_Radius
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3416242956497447101, guid: 5a2efc12e96bf1f4ea682998c79e4843, type: 3}
       propertyPath: m_Sprite
       value: 

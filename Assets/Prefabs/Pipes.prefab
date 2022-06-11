@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 837885348308881173}
   m_Layer: 0
   m_Name: ScorePassArea
-  m_TagString: Obstacle
+  m_TagString: Scoring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
