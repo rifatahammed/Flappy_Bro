@@ -5,11 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    public Sprite[] sprites;
-    private int spriteIndex;
+    //public Sprite[] sprites;
+    //private int spriteIndex;
 
     public float strength = 5f;
     public float gravity = -9.81f;
+    public float tilt = 5f;
 
     private Vector3 direction;
 
@@ -23,6 +24,15 @@ public class Player : MonoBehaviour
         //InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
     }
 
+    private void OnEnable()
+    {
+        Vector3 position = transform.position;
+        position.y = 0;
+        transform.position = position;
+        direction = Vector3.zero;
+
+    }
+
 
     private void Update()
     {
@@ -31,12 +41,18 @@ public class Player : MonoBehaviour
             direction = Vector3.up * strength;
         }
 
+        //gravity to position change
         direction.y += gravity * Time.deltaTime;
         transform.position += direction * Time.deltaTime;
 
+        //tilting
+        Vector3 rotation = transform.eulerAngles;
+        rotation.z = direction.y * tilt;
+        transform.eulerAngles = rotation;
+
     }
 
-    private void AnimateSprite()
+    /*private void AnimateSprite()
     {
         spriteIndex++;
 
@@ -49,7 +65,7 @@ public class Player : MonoBehaviour
         {
             spriteRenderer.sprite = sprites[spriteIndex];
         }
-    }
+    }*/
 
 
 }
