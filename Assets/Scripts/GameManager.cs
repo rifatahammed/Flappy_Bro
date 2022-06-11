@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Player player;
-    public Spawner spawner;
+    private Player player;
+    private Spawner spawner;
 
     public Text scoreText;
     public GameObject playButton;
