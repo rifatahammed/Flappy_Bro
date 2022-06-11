@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
+        //InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
     }
 
 
